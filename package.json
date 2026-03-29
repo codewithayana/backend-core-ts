@@ -1,0 +1,41 @@
+{
+  "name": "backend-core-ts",
+  "version": "1.0.0",
+  "description": "A scalable backend starter built with TypeScript, REST APIs, and Docker, designed for clean architecture and production-ready applications.",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec tsx src/server.ts", "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codewithayana/backend-core-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codewithayana/backend-core-ts/issues"
+  },
+  "homepage": "https://github.com/codewithayana/backend-core-ts#readme",
+  "dependencies": {
+    "argon2": "^0.44.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "joi": "^18.1.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.5.0",
+    "nodemon": "^3.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}
