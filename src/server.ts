@@ -10,18 +10,14 @@ const app = express();
 
 const PORT = process.env.PORT ?? 3000;
 
-await connectDB(); 
-
 app.use(helmet());
 app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-app.listen(PORT, () => {
-  console.log(`💻 Server running on port : http://localhost:${PORT}`);
-});
+connectDB().then(() => 
+  { app.listen(PORT, () => { console.log(`💻 Server running on port ${PORT}`); });});
 
 
 export default app;
